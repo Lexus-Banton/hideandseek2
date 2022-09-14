@@ -12,15 +12,41 @@ const totalEl = document.getElementById('total');
 const lossesEl = document.getElementById('losses');
 
 /* State */
-const handSigns = ['rock', 'Paper', 'cut'];
+const handSigns = ['rock', 'paper', 'cut'];
 
 let correctGusses = 0;
 let totalGusses = 0;
 
 //set event listeners
 
-rockButton;
+rockButton.addEventListener('click', () => {
+    const answer = getRandomItem(handSigns);
+    handleGuess(answer, 'rock');
+});
 
+paperButton.addEventListener('click', () => {
+    const answer = getRandomItem(handSigns);
+    handleGuess(answer, 'paper');
+});
+
+cutButton.addEventListener('click', () => {
+    const answer = getRandomItem(handSigns);
+    handleGuess(answer, 'cut');
+});
+
+// set reset styles
+
+function resetStyles() {
+    rockContainer.classList.remove('taliah');
+    paperContainer.classList.remove('taliah');
+    cutContainer.classList.remove('taliah');
+}
+
+function handleGuess(correctSpot, userGuess) {
+    resetStyles();
+
+    const
+}
 /* Actions */
 function loadPage() {}
 
